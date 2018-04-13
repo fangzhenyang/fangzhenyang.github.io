@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>linux下vi编辑 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="​    简单介绍linux下vi的使用">
+<meta name="keywords" content="vi的编辑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下vi编辑">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/linux下vi编辑/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="​    简单介绍linux下vi的使用">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_no_edit.jpg">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_edit.png">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_row_select.png">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_fold_code.png">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_open_code.png">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_close_code.png">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_cloumns_select.png">
+<meta property="og:image" content="http://yoursite.com/img/fangzy/vi/vi_columns_edit.png">
+<meta property="og:updated_time" content="2018-04-13T17:01:35.651Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux下vi编辑">
+<meta name="twitter:description" content="​    简单介绍linux下vi的使用">
+<meta name="twitter:image" content="http://yoursite.com/img/fangzy/vi/vi_no_edit.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Buscar"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux下vi编辑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/13/linux下vi编辑/" class="article-date">
+  <time datetime="2018-04-13T13:46:55.000Z" itemprop="datePublished">2018-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux下vi编辑
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​    简单介绍linux下vi的使用 <a id="more"></a></p>
+<h2 id="一、编辑模式和命令模式"><a href="#一、编辑模式和命令模式" class="headerlink" title="一、编辑模式和命令模式"></a>一、编辑模式和命令模式</h2><p>​    刚打开文件时，处于命令模式，输入按键“i’进入输入模式，再按ESC按键退回到命令模式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi test.txt</span><br></pre></td></tr></table></figure>
+<h5 id="刚打开文件时处于命令模式或按ESC键也会处于命令模式"><a href="#刚打开文件时处于命令模式或按ESC键也会处于命令模式" class="headerlink" title="刚打开文件时处于命令模式或按ESC键也会处于命令模式:"></a>刚打开文件时处于命令模式或按ESC键也会处于命令模式:</h5><p><img src="/img/fangzy/vi/vi_no_edit.jpg" alt="i_no_edi"></p>
+<h5 id="输入“i”编辑模式："><a href="#输入“i”编辑模式：" class="headerlink" title="输入“i”编辑模式："></a>输入“i”编辑模式：</h5><p><img src="/img/fangzy/vi/vi_edit.png" alt="i_edi"></p>
+<p>下面的几种方式也可以进入编辑模式:</p>
+<ol>
+<li>在命令模式输入“a”:进入编辑模式，光标会移到下一个字符；</li>
+<li>在命令模式输入“o”:进入编辑模式，光标会移到下一行；</li>
+<li>在命令模式输入“s”:进入编辑模式，光标处于当前字符，并且会替换当前字符；</li>
+</ol>
+<p>再按“ESC”键退回命令模式</p>
+<h2 id="二、代码的折叠与展开"><a href="#二、代码的折叠与展开" class="headerlink" title="二、代码的折叠与展开:"></a>二、代码的折叠与展开:</h2><h5 id="在命令模式下，输入Shit-v-按键可进入行选中模式"><a href="#在命令模式下，输入Shit-v-按键可进入行选中模式" class="headerlink" title="在命令模式下，输入Shit+v 按键可进入行选中模式:"></a>在命令模式下，输入Shit+v 按键可进入行选中模式:</h5><p><img src="/img/fangzy/vi/vi_row_select.png" alt="i_row_selec"></p>
+<h5 id="选中需要被折叠的代码，按下z-f按键，被选中的代码会被创建折叠"><a href="#选中需要被折叠的代码，按下z-f按键，被选中的代码会被创建折叠" class="headerlink" title="选中需要被折叠的代码，按下z+f按键，被选中的代码会被创建折叠:"></a>选中需要被折叠的代码，按下z+f按键，被选中的代码会被创建折叠:</h5><p><img src="/img/fangzy/vi/vi_fold_code.png" alt="i_fold_cod"></p>
+<h5 id="展开被折叠的代码，按z-o按键"><a href="#展开被折叠的代码，按z-o按键" class="headerlink" title="展开被折叠的代码，按z+o按键:"></a>展开被折叠的代码，按z+o按键:</h5><p><img src="/img/fangzy/vi/vi_open_code.png" alt="i_open_cod"></p>
+<h5 id="已经创建折叠的代码已经被展开时，若想要重新合上，按z-c按键"><a href="#已经创建折叠的代码已经被展开时，若想要重新合上，按z-c按键" class="headerlink" title="已经创建折叠的代码已经被展开时，若想要重新合上，按z+c按键:"></a>已经创建折叠的代码已经被展开时，若想要重新合上，按z+c按键:</h5><p><img src="/img/fangzy/vi/vi_close_code.png" alt="i_close_cod"></p>
+<h2 id="三、在已经创建折叠的代码上快速移动方法"><a href="#三、在已经创建折叠的代码上快速移动方法" class="headerlink" title="三、在已经创建折叠的代码上快速移动方法:"></a>三、在已经创建折叠的代码上快速移动方法:</h2><ol>
+<li>向下移到一行：按j键；</li>
+<li>向上移到一千:按k键；</li>
+<li>向左移动一个字符:按k键；</li>
+<li>向左移动一个字符:按l键；</li>
+<li>移动到下一个折叠处: 按z+j键；</li>
+<li>移动到上一个折叠处: 按z+k键</li>
+</ol>
+<h2 id="四、列选中方法"><a href="#四、列选中方法" class="headerlink" title="四、列选中方法"></a>四、列选中方法</h2><h5 id="输入ctrl-v进入列选中模式："><a href="#输入ctrl-v进入列选中模式：" class="headerlink" title="输入ctrl+v进入列选中模式："></a>输入ctrl+v进入列选中模式：</h5><p><img src="/img/fangzy/vi/vi_cloumns_select.png" alt="i_cloumns_selec"></p>
+<h5 id="选中之后可以进行插入、删除操作："><a href="#选中之后可以进行插入、删除操作：" class="headerlink" title="选中之后可以进行插入、删除操作："></a>选中之后可以进行插入、删除操作：</h5><ol>
+<li><p>按shift+i进入列编辑模式，输入完后再按ESC按键退出列编辑模式:</p>
+<p><img src="/img/fangzy/vi/vi_columns_edit.png" alt="i_columns_edi"></p>
+</li>
+</ol>
+<h2 id="五、退出vi"><a href="#五、退出vi" class="headerlink" title="五、退出vi"></a>五、退出vi</h2><ol>
+<li>输入”shift+:”，再输入”q!”回车,不保存并且退出编辑；</li>
+<li>输入”shift+:”，再输入”w!”回车,保存并且退出编辑；</li>
+<li>直接输入”shift+z+z”,保存并且退出编辑；</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/13/linux下vi编辑/" data-id="cjfy5laas0000fkefc3wqqujd" class="article-share-link">Compartir</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vi的编辑/">vi的编辑</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/27/我是方振养/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Viejo</strong>
+      <div class="article-nav-title">我是方振养</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi的编辑/">vi的编辑</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nube de Tags</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/vi的编辑/" style="font-size: 10px;">vi的编辑</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivos</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Posts recientes</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/13/linux下vi编辑/">linux下vi编辑</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/27/我是方振养/">我是方振养</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/27/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Construido por <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
